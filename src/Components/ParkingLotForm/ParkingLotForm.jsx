@@ -10,19 +10,19 @@ const PRIORITIES = {
 
 
 
-export default function ParkingLotForm() {
+export default function ParkingLotForm({addItem}) {
 
-    const [date, setdate] = useState('');
-    const [link, setlink] = useState('');
+    const [date, setDate] = useState('');
+    const [link, setLink] = useState('');
     const [description, setDescription] = useState('');
     const [priority, setPriority] = useState(PRIORITIES.Medium);
 
     function handleDateChange(e) {
-        setdate(e.Target.value);
+        setDate(e.Target.value);
     }
 
     function handleLinkChange(e) {
-        setlink(e.Target.value);
+        setLink(e.Target.value);
     }
 
     function handleDescriptionChange(e) {
@@ -35,7 +35,15 @@ export default function ParkingLotForm() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(date, link, description, priority);
+
+        const [y, M, d] = date.split('-');
+        const formattedDate = `${M}/${d}/${y}`;
+        addItem(formattedDate, link, description, priority);
+
+        setDate('');
+        setLink('');
+        setDescription('');
+        setPriority(PRIORITIES.Medium);
     }
 
     return (
