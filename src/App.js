@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {nanoid} from 'nanoid';
 import './App.css';
 
@@ -6,8 +6,13 @@ import ParkingLotForm from "./Components/ParkingLotForm/ParkingLotForm";
 import ParkingLotList from './Components/ParkingLotList/ParkingLotList';
 
 export default function App() {
-
   let [parkingLotItems, setParkingLotItems] = useState(getInitialState());
+
+  useEffect(saveParkingLotItems, [parkingLotItems]);
+
+  function saveParkingLotItems() {
+    localStorage.setItem('items', JSON.stringify(parkingLotItems));
+  }
 
   function getInitialState() {
     let savedState = localStorage.getItem('items');
@@ -18,8 +23,7 @@ export default function App() {
   }
 
   function addItem(date, link, description, priority) {
-    setParkingLotItems((oldItems) => {
-      let newItems = [
+    setParkingLotItems((oldItems) => [
         ...oldItems,
         {
             id: nanoid(),
@@ -28,18 +32,13 @@ export default function App() {
             link,
             priority
         }
-      ]
-      localStorage.setItem('items', JSON.stringify(newItems));
-      return newItems;
-    });
+      ]);
   }
   
   function deleteItem(id) {
-    setParkingLotItems((oldItems) => {
-        let newItems = oldItems.filter((item) => item.id !== id);
-        localStorage.setItem('items', JSON.stringify(newItems));
-        return newItems;
-    });
+    setParkingLotItems((oldItems) =>
+        oldItems.filter((item) => item.id !== id)
+    );
   }
 
   return (
