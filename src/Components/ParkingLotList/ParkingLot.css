@@ -5,7 +5,7 @@
     }
     
     .parking-lot-item-container {
-        width: 20rem;
+        width: 24rem;
         box-shadow: 0px 0px 10px rgba(155, 155, 155, 0.8);
         text-align: left;
     }
@@ -26,7 +26,12 @@
 
     .delete-button {
         background-color: darkred;
+        
+    }
+
+    .card-button {
         border: none;
+        width: 1rem;
         box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
         border-radius: 50%;
     }

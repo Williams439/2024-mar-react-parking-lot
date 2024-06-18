@@ -1,5 +1,16 @@
-import React from 'react'
-import { Card, CardHeader, CardBody, CardTitle, CardText, Button} from 'reactstrap';
+import React, { useState } from 'react'
+import ParkingLotForm from '../ParkingLotForm/ParkingLotForm';
+import { 
+    Card, 
+    CardHeader, 
+    CardBody, 
+    CardTitle, 
+    CardText, 
+    Button,
+    Modal,
+    ModalHeader,
+    ModalBody 
+} from 'reactstrap';
 
 export default function ParkingLotItem({
     deleteItem, 
@@ -9,6 +20,9 @@ export default function ParkingLotItem({
     link, 
     description
 }) {
+    const [modal, setModal] = useState(false);
+
+    const toggle = () => setModal(oldModalState => !oldModalState);
   
     function handleDelete() {
         deleteItem(id);
@@ -20,13 +34,21 @@ export default function ParkingLotItem({
         color="secondary"
         inverse>
         <CardHeader className="card-header">
-            {date} (Priority: {priority}) 
-            <Button 
-                color="danger" 
-                className="delete-button"
-                onClick={handleDelete}>
-                <strong>X</strong>
-            </Button>
+            <div>
+                {date} (Priority: {priority}) 
+            </div>
+            <div>
+                <Button 
+                    color="success" 
+                    className="card-button"
+                    onClick={toggle}>✎</Button>
+                <Button 
+                    color="danger" 
+                    className="card-button delete-button"
+                    onClick={handleDelete}>
+                    <strong>X</strong>
+                </Button>
+            </div>
         </CardHeader>
         <CardBody>
             <CardTitle tag="h5">
@@ -39,6 +61,12 @@ export default function ParkingLotItem({
                 </a>
             </CardText>
         </CardBody>
-        </Card>  
+        <Modal isOpen={modal} toggle={toggle} fade={false}>
+            <ModalHeader data-bs-theme="bg-dark" className="bg-dark" toggle={toggle}>Modal title</ModalHeader>
+            <ModalBody data-bs-theme="bg-dark" className="bg-dark">
+                <ParkingLotForm />
+            </ModalBody>
+        </Modal>
+    </Card>  
   )
 }
