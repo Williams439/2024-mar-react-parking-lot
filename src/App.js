@@ -50,7 +50,7 @@ export default function App() {
         <Timer />
       </header>
       <main>
-        <ParkingLotForm addItem={addItem} />
+        <ParkingLotForm submitData={addItem} />
         <ParkingLotList 
           parkingLotItems={parkingLotItems}
           deleteItem={deleteItem}/>

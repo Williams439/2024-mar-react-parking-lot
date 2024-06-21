@@ -28,6 +28,15 @@ export default function ParkingLotItem({
         deleteItem(id);
     }
 
+    function usDateToYyyyMmDd(date) {
+        const [M, d, y] = date.split('/');
+        return `${y}-${M}-${d}`;
+    }
+
+    function updateItem(formattedDate, link, description, priority) {
+        console.log(formattedDate, link, description, priority);
+    }
+
     return (
     <Card 
         className="my-2 parking-lot-item-container"
@@ -64,7 +73,14 @@ export default function ParkingLotItem({
         <Modal isOpen={modal} toggle={toggle} fade={false}>
             <ModalHeader data-bs-theme="bg-dark" className="bg-dark" toggle={toggle}>Modal title</ModalHeader>
             <ModalBody data-bs-theme="bg-dark" className="bg-dark">
-                <ParkingLotForm />
+                <ParkingLotForm 
+                    id={id}
+                    defaultDate={usDateToYyyyMmDd(date)} 
+                    defaultPriority={priority} 
+                    defaultLink={link} 
+                    defaultDescription={description}
+                    submitData={updateItem}
+                />
             </ModalBody>
         </Modal>
     </Card>  
