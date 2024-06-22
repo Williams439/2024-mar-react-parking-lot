@@ -31,19 +31,19 @@ export default function ParkingLotForm({
     const [priority, setPriority] = useState(defaultPriority ?? PRIORITIES.Medium);
 
     function handleDateChange(e) {
-        setDate(e.Target.value);
+        setDate(e.target.value);
     }
 
     function handleLinkChange(e) {
-        setLink(e.Target.value);
+        setLink(e.target.value);
     }
 
     function handleDescriptionChange(e) {
-        setDescription(e.Target.value);
+        setDescription(e.target.value);
     }
 
     function handlePriorityChange(e) {
-        setPriority(e.Target.value);
+        setPriority(e.target.value);
     }
 
     function handleSubmit(e) {
