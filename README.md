@@ -1,5 +1,7 @@
 # Browser Parking Lot
 
+Hosting Link: https://williams439.github.io/2024-mar-react-parking-lot/
+
 The objective of this project is to store useful links with a todo item that can be prioritized using the labels HIGH, MEDIUM, LOW.
 
 An item contains:
@@ -16,15 +18,15 @@ The Browser Parking Lot enables you to eliminate tabs in your browser. Therefore
 ```
 
 As a student
-I want to organize and prioritize information for my research
+I want to organize my homework sites more efficiently
 So that I can get a good grade
 
-As a software developer
-I want to save and prioritize my tutorial videos outside the browser
-So that I can focus on my work using just a few browser tabs
+As a researcher
+I want to save and prioritize important articles for my research
+So that quickly access the material i have saved
 
-As a Video Site (Netflix, Amazon Prime Video, HBO) subscriber
-I want to prioritize my watchlist across subscription services
+As a video essay enthusiast
+I want to prioritize my watchlist from different YouTube accounts
 So that I know what to watch next
 
 ```
