@@ -16,7 +16,8 @@ export default function ParkingLotForm({
     defaultDate, 
     defaultPriority, 
     defaultLink, 
-    defaultDescription
+    defaultDescription,
+    cancelClicked,
 }) {
 
     let idPrefix = '';
@@ -149,6 +150,15 @@ export default function ParkingLotForm({
             <Button type="submit">
                 Submit
             </Button>
+            {
+                typeof cancelClicked === 'function' && 
+                <button 
+                    type="button" 
+                    className="ms-3"
+                    onClick={cancelClicked}>
+                    Cancel
+                </button>
+            }
         </Form>
     )
 }

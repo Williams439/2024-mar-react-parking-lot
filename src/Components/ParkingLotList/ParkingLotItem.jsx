@@ -13,7 +13,8 @@ import {
 } from 'reactstrap';
 
 export default function ParkingLotItem({
-    deleteItem, 
+    deleteItem,
+    editItem, 
     id, 
     date, 
     priority, 
@@ -34,7 +35,8 @@ export default function ParkingLotItem({
     }
 
     function updateItem(formattedDate, link, description, priority) {
-        console.log(formattedDate, link, description, priority);
+        editItem(id, formattedDate, link, description, priority);
+        setModal(false);
     }
 
     return (
@@ -70,7 +72,7 @@ export default function ParkingLotItem({
                 </a>
             </CardText>
         </CardBody>
-        <Modal isOpen={modal} toggle={toggle} fade={false}>
+        <Modal isOpen={modal} toggle={toggle} fade={true}> backdrop={false}
             <ModalHeader data-bs-theme="bg-dark" className="bg-dark" toggle={toggle}>Modal title</ModalHeader>
             <ModalBody data-bs-theme="bg-dark" className="bg-dark">
                 <ParkingLotForm 
@@ -80,6 +82,7 @@ export default function ParkingLotItem({
                     defaultLink={link} 
                     defaultDescription={description}
                     submitData={updateItem}
+                    cancelClicked={toggle}
                 />
             </ModalBody>
         </Modal>
