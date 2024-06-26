@@ -147,14 +147,14 @@ export default function ParkingLotForm({
                     </Label>
                 </div>
             </FormGroup>
-            <Button type="submit">
+            <Button type="submit" className="submitButton">
                 Submit
             </Button>
             {
                 typeof cancelClicked === 'function' && 
                 <button 
                     type="button" 
-                    className="ms-3"
+                    className="ms-2"
                     onClick={cancelClicked}>
                     Cancel
                 </button>

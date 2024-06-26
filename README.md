@@ -1,6 +1,8 @@
-# Browser Parking Lot
+# Web-Surfing Organizer
 
 Hosting Link: https://williams439.github.io/2024-mar-react-parking-lot/
+
+Purpose of this project is to demonstrate my skills in using CSS, Javascript, and REACT.
 
 The objective of this project is to store useful links with a todo item that can be prioritized using the labels HIGH, MEDIUM, LOW.
 
@@ -11,7 +13,7 @@ An item contains:
 - date of creation
 - priority label (`HIGH`, `MEDIUM`, `LOW`)
 
-The Browser Parking Lot enables you to eliminate tabs in your browser. Therefore, we reduce memory consumption of your computer, because using the browser as a todo list is counterproductive.
+The Web-Surfing Organizer enables you to eliminate tabs in your browser. Therefore, we reduce memory consumption of your computer, because using the browser as a todo list is counterproductive.
 
 ## User stories
 
