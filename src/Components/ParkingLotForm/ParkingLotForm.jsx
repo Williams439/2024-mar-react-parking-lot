@@ -113,7 +113,7 @@ export default function ParkingLotForm({
                         onChange={handlePriorityChange}
                         id={`${idPrefix}prio-high`}
                     />
-                    {''}
+                    {' '}
                     <Label htmlFor={`${idPrefix}prio-high`} className="me-3">
                         High
                     </Label>
@@ -127,7 +127,7 @@ export default function ParkingLotForm({
                         onChange={handlePriorityChange}
                         id={`${idPrefix}prio-medium`}
                     />
-                    {''}
+                    {' '}
                     <Label htmlFor={`${idPrefix}prio-medium`} className="me-3">
                         Medium
                     </Label>
@@ -141,7 +141,7 @@ export default function ParkingLotForm({
                         onChange={handlePriorityChange}
                         id={`${idPrefix}prio-low`}
                     />
-                    {''}
+                    {' '}
                     <Label htmlFor={`${idPrefix}prio-low`} className="me-3">
                         Low
                     </Label>
@@ -152,12 +152,12 @@ export default function ParkingLotForm({
             </Button>
             {
                 typeof cancelClicked === 'function' && 
-                <button 
+                <Button 
                     type="button" 
                     className="ms-2"
                     onClick={cancelClicked}>
                     Cancel
-                </button>
+                </Button>
             }
         </Form>
     )

@@ -69,8 +69,8 @@ export default function App() {
         <ParkingLotForm submitData={addItem} />
         <ParkingLotList 
           parkingLotItems={parkingLotItems}
-          deleteItem={deleteItem}/>
-          editItem={editItem}
+          deleteItem={deleteItem}
+          editItem={editItem}/>
       </main>
     </div>
   );
