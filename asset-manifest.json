@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/2024-mar-react-parking-lot/static/css/main.d5bda3c6.css",
+    "main.css": "/2024-mar-react-parking-lot/static/css/main.71f29008.css",
     "main.js": "/2024-mar-react-parking-lot/static/js/main.2e2d5def.js",
     "index.html": "/2024-mar-react-parking-lot/index.html",
-    "main.d5bda3c6.css.map": "/2024-mar-react-parking-lot/static/css/main.d5bda3c6.css.map",
+    "main.71f29008.css.map": "/2024-mar-react-parking-lot/static/css/main.71f29008.css.map",
     "main.2e2d5def.js.map": "/2024-mar-react-parking-lot/static/js/main.2e2d5def.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5bda3c6.css",
+    "static/css/main.71f29008.css",
     "static/js/main.2e2d5def.js"
   ]
 }
